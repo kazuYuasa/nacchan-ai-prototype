@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>なっちゃんAI - 書類カタログ</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+body {
+font-family: "Meiryo", "メイリオ", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
+}
+</style>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+navy: {
+900: '#0f172a',
+800: '#1e293b',
+}
+}
+}
+}
+}
+</script>
+</head>
+<body class="bg-gray-50 text-slate-900 flex min-h-screen">
+<!-- Sidebar -->
+<aside class="w-64 bg-navy-900 text-slate-300 flex flex-col fixed h-full">
+<div class="p-6 flex-grow">
+<div class="flex items-center gap-2 mb-8">
+<div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center font-bold text-white text-lg">な</div>
+<h1 class="text-xl font-bold text-white tracking-tight">なっちゃんAI</h1>
+</div>
+<nav class="space-y-1">
+<a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-navy-800 hover:text-white transition-all text-sm">
+<i data-lucide="layout-dashboard" class="w-5 h-5"></i>ダッシュボード
+</a>
+<a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-blue-600 text-white font-medium shadow-lg shadow-blue-900/20 text-sm">
+<i data-lucide="file-text" class="w-5 h-5"></i>書類カタログ
+</a>
+<a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-navy-800 hover: <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-navy-800 hover:text-white transition-all text-sm"> </a> <i data-lucide="credit-card" class="w-5 h-5"></i>クレジット管理 <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-navy-800 hover:text-white transition-all text-sm"> </a>
+<a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-navy-800 hover:text-white transition-all text-sm"> <i data-lucide="history" class="w-5 h-5"></i>書類履歴
+
+
+
+
+
+<i data-lucide="message-square" class="w-5 h-5"></i> チャット
+</a>
+<a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-navy-800 hover:text-white transition-all text-sm">
+<i data-lucide="bell" class="w-5 h-5"></i> 通知
+</a>
+<a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-navy-800 hover:text-white transition-all text-sm">
+<i data-lucide="settings" class="w-5 h-5"></i> 設定
+</a>
+</nav>
+</div>
+<div class="p-6 border-t border-slate-800">
+<div class="bg-navy-800 rounded-xl p-4">
+<p class="text-xs text-slate-400 mb-1">現在の残高</p>
+<div class="flex items-baseline gap-1">
+<span class="text-2xl font-bold text-white">142</span>
+<span class="text-xs text-slate-400">クレジット</span>
+</div>
+<button class="w-full mt-3 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-mediumrounded-lgtransition-colors">
+チャージする
+</button>
+</div>
+</div>
+</aside>
+code
+コード
+<!-- Main Content -->
+<main class="flex-1 ml-64 flex flex-col">
+    <!-- Header -->
+    <header class="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-8 sticky top-0 z-10">
+        <div class="flex items-center gap-4 flex-1 max-w-xl">
+            <div class="relative w-full">
+                <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 w-4 h-4"></i>
+                <input type="text" placeholder="書類名で検索..." class="w-full pl-10 pr-4 py-2 bg-slate-100 border-transparent focus:bg-white focus:border-blue-500 rounded-lg text-sm transition-all outline-none">
+            </div>
+        </div>
+        <div class="flex items-center gap-6">
+            <button class="relative p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors">
+                <i data-lucide="bell" class="w-5 h-5"></i>
+                <span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
+            </button>
+            <div class="flex items-center gap-3 pl-6 border-l border-slate-200">
+                <div class="text-right">
+                    <p class="text-sm font-bold">田中太郎</p>
+                    <p class="text-xs text-slate-500">管理者</p>
+                </div>
+                <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-600">
+                    <i data-lucide="user" class="w-5 h-5"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content Area -->
+    <div class="p-8 max-w-7xl mx-auto w-full">
+        <div class="mb-8">
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                    <h2 class="text-2xl font-bold tracking-tight mb-1">東京都で利用可能なテンプレート</h2>
+                    <p class="text-slate-500 text-sm">9件のテンプレートが見つかりました</p>
+                </div>
+                <button class="flex items-center gap-2 px-4 py-2 border border-slate-200 rounded-lg text-sm font-medium hover:bg-slate-50 transition-colors">
+                    <i data-lucide="filter" class="w-4 h-4"></i>フィルター
+                </button>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="flex gap-2 p-1 bg-slate-100 rounded-xl w-fit mb-8">
+                <button class="px-5 py-2 text-sm font-medium rounded-lg bg-white text-blue-600 shadow-sm">すべて</button>
+                <button class="px-5 py-2 text-sm font-medium rounded-lg text-slate-600 hover:text-slate-900">喀痰吸引等研修</button>
+                <button class="px-5 py-2 text-sm font-medium rounded-lg text-slate-600 hover:text-slate-900">処遇改善加算</button>
+                <button class="px-5 py-2 text-sm font-medium rounded-lg text-slate-600 hover:text-slate-900">事業所指定</button>
+            </div>
+
+            <!-- Document Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-lg hover:border-blue-200 transition-all group flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-700">喀痰吸引等研修</span>
+                        <span class="text-xs text-slate-400">2026年度版</span>
+                    </div>
+                    <h3 class="text-lg font-bold leading-snug mb-4 group-hover:text-blue-600 transition-colors flex-grow">喀痰吸引等研修 実地研修 実施報告書</h3>
+                    <div class="mt-auto">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                                <span class="text-sm font-bold text-emerald-600">無料</span>
+                            </div>
+                            <span class="text-[10px] font-bold text-emerald-500 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-100">FREE</span>
+                        </div>
+                        <button class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+                            生成する <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-lg hover:border-blue-200 transition-all group flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-700">喀痰吸引等研修</span>
+                        <span class="text-xs text-slate-400">2026年度版</span>
+                    </div>
+                    <h3 class="text-lg font-bold leading-snug mb-4 group-hover:text-blue-600 transition-colors flex-grow">喀痰吸引等研修 修了証明書</h3>
+                    <div class="mt-auto">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                                <span class="text-sm font-bold text-emerald-600">無料</span>
+                            </div>
+                            <span class="text-[10px] font-bold text-emerald-500 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-100">FREE</span>
+                        </div>
+                        <button class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+                            生成する <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-lg hover:border-blue-200 transition-all group flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-700">喀痰吸引等研修</span>
+                        <span class="text-xs text-slate-400">2026年度版</span>
+                    </div>
+                    <h3 class="text-lg font-bold leading-snug mb-4 group-hover:text-blue-600 transition-colors flex-grow">喀痰吸引等研修 受講申込書</h3>
+                    <div class="mt-auto">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                                <span class="text-sm font-bold text-emerald-600">無料</span>
+                            </div>
+                            <span class="text-[10px] font-bold text-emerald-500 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-100">FREE</span>
+                        </div>
+                        <button class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+                            生成する <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-lg hover:border-blue-200 transition-all group flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-700">処遇改善加算</span>
+                        <span class="text-xs text-slate-400">2026年度版</span>
+                    </div>
+                    <h3 class="text-lg font-bold leading-snug mb-4 group-hover:text-blue-600 transition-colors flex-grow">介護職員処遇改善加算 届出書</h3>
+                    <div class="mt-auto">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                <span class="text-sm font-bold text-blue-600">1クレジット</span>
+                            </div>
+                        </div>
+                        <button class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+                            生成する <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-lg hover:border-blue-200 transition-all group flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-700">処遇改善加算</span>
+                        <span class="text-xs text-slate-400">2026年度版</span>
+                    </div>
+                    <h3 class="text-lg font-bold leading-snug mb-4 group-hover:text-blue-600 transition-colors flex-grow">処遇改善加算 実績報告書</h3>
+                    <div class="mt-auto">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                <span class="text-sm font-bold text-blue-600">1クレジット</span>
+                            </div>
+                        </div>
+                        <button class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+                            生成する <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-lg hover:border-blue-200 transition-all group flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-100 text-purple-700">事業所指定</span>
+                        <span class="text-xs text-slate-400">2026年度版</span>
+                    </div>
+                    <h3 class="text-lg font-bold leading-snug mb-4 group-hover:text-blue-600 transition-colors flex-grow">事業所指定更新申請書</h3>
+                    <div class="mt-auto">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                <span class="text-sm font-bold text-blue-600">1クレジット</span>
+                            </div>
+                        </div>
+                        <button class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+                            生成する <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+</script>
+</body>
+</html>
